@@ -1,48 +1,58 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: normal;
 }
-body{
-  background: linear-gradient(to right, #ff5586, #aa7745)
+
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to right, #a8417d, #6f00ff);
 }
-.calculator{
-     display: grid;
-     min-height: 100vh;
-     justify-content: center;
-     align-content: center;
-     grid-template-columns: repeat(4, 100px);
-     grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
-.calculator > button{
-    font-size: 2rem;
-    cursor: pointer;
-    border: 1px solid white;
-    outline: none;
-    background: rgba(255, 255, 255, 0.75);
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, .75);
 }
-.calculator > button:hover{
-    background: rgba(255, 255, 255, .9);
+
+.calculator-grid > button:hover {
+  background-color: rgba(255, 255, 255, .9);
 }
-.span-two{
-    grid-column: span 2;
+
+.span-two {
+  grid-column: span 2;
 }
-.output{
-    grid-column: 1 / -1;
-    background: rgba(0, 0, 0, .75);
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    flex-direction: column;
-    padding: 10px;
-    word-wrap: break-word;
-    word-break: break-all;
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, .75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
 }
-.output .previous-num {
-   color: rgba(255, 255, 255, 0.70);
-   font-size: 1.2rem
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, .75);
+  font-size: 1.5rem;
 }
-.output .current-num{
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1.7rem
+
+.output .current-operand {
+  color: white;
+  font-size: 2.5rem;
 }
