@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  background: linear-gradient(to right, #ff5586, #aa7745)
+}
+.calculator{
+     display: grid;
+     min-height: 100vh;
+     justify-content: center;
+     align-content: center;
+     grid-template-columns: repeat(4, 100px);
+     grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+.calculator > button{
+    font-size: 2rem;
+    cursor: pointer;
+    border: 1px solid white;
+    outline: none;
+    background: rgba(255, 255, 255, 0.75);
+}
+.calculator > button:hover{
+    background: rgba(255, 255, 255, .9);
+}
+.span-two{
+    grid-column: span 2;
+}
+.output{
+    grid-column: 1 / -1;
+    background: rgba(0, 0, 0, .75);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.output .previous-num {
+   color: rgba(255, 255, 255, 0.70);
+   font-size: 1.2rem
+}
+.output .current-num{
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.7rem
+}
